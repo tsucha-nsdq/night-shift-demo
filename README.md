@@ -7,5 +7,6 @@
 ```sh
 python3 -m bookmemo add "コンビニ人間" --author "村田沙耶香" --rating 4
 python3 -m bookmemo list
+python3 -m bookmemo delete "コンビニ人間"
 python3 -m unittest
 ```

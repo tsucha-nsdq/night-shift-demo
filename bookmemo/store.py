@@ -31,3 +31,12 @@ class Store:
         books = self.load()
         books.append(book)
         self.save(books)
+
+    def delete(self, title: str) -> int:
+        """タイトルが一致する本を全部消して、消した冊数を返す。"""
+        books = self.load()
+        kept = [b for b in books if b.title != title]
+        removed = len(books) - len(kept)
+        if removed:
+            self.save(kept)
+        return removed
